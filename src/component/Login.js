@@ -20,10 +20,15 @@ class Login extends Component {
             <React.Fragment>
                 <div className="d-flex">
                     <div className="login-sidebar col-sm-6 col-md-3 col-lg-3 col-12">
-                        {/* <div style={{ textAlign: "center" }}><span style={{ fontSize: "48px" }}>L</span><span style={{ fontSize: "32px" }}>ogin</span></div> */}
+                        <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-Top" alt="" />
+                        <a className="login-weblink" href="./">
+                            <span class="mdi mdi-help"></span>
+                        </a>
                         <div className="login-logo">
-                            <img src="images/Everfall.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""/>
+                            <img src="images/Everfall.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+
                         </div>
+                        <div class="login-title"><span >Signed in With Your <br /><strong>EverFall Games</strong> Account</span></div>
                         <form className="login-form">
                             {/* <div>
                                 <div> <label class="label-form-login">Username</label></div>
@@ -58,7 +63,7 @@ class Login extends Component {
                             </div>
                             <div className="login-Checkbox">
                                 <input name="" id="remeberMe" className="remember-login" type="checkbox" value="" />
-                                <label className="login-checkmark" for="remeberMe" >Remeber Me</label>
+                                <label className="login-checkmark" for="remeberMe" >Stay signed in</label>
                             </div>
                             <div className="text-center">
                                 <button className={
@@ -68,6 +73,16 @@ class Login extends Component {
                                 </button>
                             </div>
                         </form>
+                        <div className="login-footer">
+                            <div>
+                                <a href="./"><span>CREATE ACCOUNT</span></a>
+                            </div>
+                            <div>
+                                <a href="./"><span style={{ float: "left" }}>CANT'T SIGN IN?</span></a>
+                                <span style={{ float: "right" }}>v1.0001</span>
+                            </div>
+                        </div>
+                        <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-bottom" alt="" />
                     </div>
                     <div className="login-content col-sm-6 col-md-9 col-lg-9">
                     </div>

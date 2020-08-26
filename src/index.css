@@ -1,5 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  
+}
+a {
+  text-decoration : none !important
 }
