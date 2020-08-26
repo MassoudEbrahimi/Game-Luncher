@@ -21,6 +21,9 @@ class Login extends Component {
                 <div className="d-flex">
                     <div className="login-sidebar col-sm-6 col-md-3 col-lg-3 col-12">
                         <div style={{ textAlign: "center" }}><span style={{ fontSize: "48px" }}>L</span><span style={{ fontSize: "32px" }}>ogin</span></div>
+                        <div>
+                            <img src="Ev" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+                        </div>
                         <form className="login-form">
                             {/* <div>
                                 <div> <label class="label-form-login">Username</label></div>
