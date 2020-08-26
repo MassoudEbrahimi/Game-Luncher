@@ -20,6 +20,12 @@
     /* width: calc(100% - 300px); */
 }
 
+.login-logo {
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+}
+
 .label-form-login {
     margin: 5px 15px;
     padding: 5px;
@@ -50,6 +56,17 @@
     color: crimson;
 }
 
+.btn-login-submit {
+    margin-top: 20px;
+    background-color: crimson;
+    border: crimson 2px solid;
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
 /* input[type=checkbox]+label {
     color: #ccc;
     font-style: italic;
@@ -61,13 +78,11 @@ input[type=checkbox]:checked+label {
 } */
 
 .login-Checkbox {
-    margin: 25px 10px 10px 45px;
+    margin: 30px 10px 10px 70px;
 }
-
 input[type="checkbox"] {
     display: none;
 }
-
 input[type="checkbox"]+label::before {
     width: 1.25rem;
     height: 1.25rem;
@@ -85,54 +100,44 @@ input[type="checkbox"]+label::before {
 input[type="checkbox"]:checked+label::before {
     box-shadow: inset 0px 0px 0px 3px #fff;
     background-color: crimson;
-    border: 2px solid crimson;
-    
-}
-
-.btn-login-submit {
-    margin-top: 20px;
-    background-color: crimson;
-    border: crimson 2px solid;
-    padding: 5px 25px;
-    border-radius: 5px;
-    font-size: 30px;
-    text-align: center;
-    color: white;
+    border:2px solid crimson;
 }
 
 .user-input-wrp {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: auto;
-    margin-top: 20px;
 }
-
 .user-input-wrp .inputText {
     width: 100%;
     outline: none;
-    border: none;
+    border: 1px lightslategrey solid;
     border-bottom: 1px solid #777;
+    border-radius: 8px;
+    height: 45px;
+    font-size: 15px;
+    text-indent: 10px;
     box-shadow: none !important;
 }
 
 .user-input-wrp .inputText:focus {
     border-color: crimson;
-    border-width: medium medium 2px;
+    border-width:  2px;
     transition: 0.4s;
 }
 
 .user-input-wrp .floating-label {
     position: absolute;
     pointer-events: none;
-    top: 18px;
-    left: 10px;
+    top: 32px;
+    left: 12px;
     transition: 0.3s ease all;
 }
 
 .user-input-wrp input:focus~.floating-label, .user-input-wrp input:not(:focus):valid~.floating-label {
-    top: 0px;
-    left: 10px;
-    font-size: 13px;
+    top: 24px;
+    left: 12px;
+    font-size: 10px;
     opacity: 1;
 }
 
