@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { Form } from 'react-bootstrap';
 
 class Login extends Component {
     constructor(props) {
@@ -10,10 +11,13 @@ class Login extends Component {
             password: null,
             newUser: null,
             newPassword: null,
+            newEmail: null,
+            confirmnewPassword : null,
             activeTabID: 0
         }
     }
     componentDidMount() {
+
     }
     loginform = () => {
         const { userName, password } = this.state
@@ -33,14 +37,14 @@ class Login extends Component {
                         <input type="text" class="inputText" required
                             onChange={e => this.setState({ userName: e.target.value })}
                             name="" id="" value={userName} autoComplete={false} />
-                        <span class="floating-label">Username</span>
+                        <span class="floating-label">Username<span className="mdi mdi-asterisk"/></span>
                     </div>
                     <div class="user-input-wrp">
                         <br />
                         <input type="password" class="inputText" required
                             onChange={e => this.setState({ password: e.target.value })}
                             value={password} autoComplete={false} />
-                        <span class="floating-label">Password</span>
+                        <span class="floating-label">Password<span className="mdi mdi-asterisk"/></span>
                     </div>
                     <div className="login-Checkbox">
                         <input name="" id="remeberMe" className="remember-login" type="checkbox" value="" />
@@ -68,7 +72,8 @@ class Login extends Component {
         )
     }
     signUpform = () => {
-        const { newUser, newPassword } = this.state
+        const { newUser, newPassword, newEmail , confirmnewPassword } = this.state
+        debugger
         return (
             <React.Fragment>
                 <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-Top" alt="" />
@@ -77,7 +82,10 @@ class Login extends Component {
                 </a>
                 <div className="login-logo">
                     <img src="images/Everfall.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
-
+                    <br />
+                    <br />
+                    <br />
+                    <h3>SIGN UP</h3>
                 </div>
                 <form className="signUp-form" onSubmit={this.handleSignup}>
                     <div class="user-input-wrp">
@@ -85,28 +93,28 @@ class Login extends Component {
                         <input type="text" class="inputText" required
                             onChange={e => this.setState({ newUser: e.target.value })}
                             name="" id="" value={newUser} autoComplete={false} />
-                        <span class="floating-label">Usename</span>
+                        <span class="floating-label">Username<span className="mdi mdi-asterisk"/></span>
                     </div>
                     <div class="user-input-wrp">
                         <br />
-                        <input type="email" class="inputText" required
-                            onChange={e => this.setState({ newUser: e.target.value })}
-                            name="" id="" value={newUser} autoComplete={false} />
-                        <span class="floating-label">Email</span>
-                    </div>
-                    <div class="user-input-wrp">
-                        <br />
-                        <input type="password" class="inputText" required
-                            onChange={e => this.setState({ newPassword: e.target.value })}
-                            value={newPassword} autoComplete={false} />
-                        <span class="floating-label">Password</span>
+                        <input type="email" className="inputText" required
+                            onChange={e => this.setState({ newEmail: e.target.value })}
+                            name="" id="" value={newEmail} autoComplete={false}  />
+                        <span className="floating-label">Email<span className="mdi mdi-asterisk"/></span>
                     </div>
                     <div class="user-input-wrp">
                         <br />
                         <input type="password" class="inputText" required
                             onChange={e => this.setState({ newPassword: e.target.value })}
                             value={newPassword} autoComplete={false} />
-                        <span class="floating-label">Confirm Password</span>
+                        <span class="floating-label">Password<span className="mdi mdi-asterisk"/></span>
+                    </div>
+                    <div class="user-input-wrp">
+                        <br />
+                        <input type="password" class="inputText" required
+                            onChange={e => this.setState({ confirmnewPassword: e.target.value })}
+                            value={confirmnewPassword} autoComplete={false} />
+                        <span class="floating-label">Confirm Password<span className="mdi mdi-asterisk"/></span>
                     </div>
                     <div className="login-Checkbox">
                         <input name="" id="remeberMe" className="remember-login" type="checkbox" value="" />
@@ -121,13 +129,14 @@ class Login extends Component {
                     </div>
                     <div className="login-footer">
                         <div>
-                            <div className="signUp-link" onClick={e => this.setState({ activeTabID: 0 })}><span className="fa fa-home" style={{fontSize:"32px"}}/></div>
+                            <div className="signUp-link" onClick={e => this.setState({ activeTabID: 0 })}><span className="fa fa-home" style={{ fontSize: "32px" }} /></div>
                         </div>
                         {/* <div>
                             <a href="./"><span style={{ float: "left" }}>CANT'T SIGN IN?</span></a>
                             <span style={{ float: "right" }}>v1.0001</span>
                         </div> */}
                     </div>
+
                 </form>
                 <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-bottom" alt="" />
             </React.Fragment>
@@ -140,8 +149,8 @@ class Login extends Component {
             <React.Fragment>
                 <div className="d-flex login-content">
                     <div className="login-sidebar card " >
-                        {activeTabID === 0 ? this.loginform() : this.signUpform()}
-                        {/* {activeTabID === 1 && } */}
+                        {activeTabID === 0 && this.loginform()}
+                        {activeTabID === 1 && this.signUpform()}
                     </div>
                     {/* <div className="login-content col-sm-5 col-md-8 col-lg-8">
                     </div> */}

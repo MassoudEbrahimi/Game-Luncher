@@ -5,10 +5,11 @@
     width: 450px;
     height: 700px;
     margin: auto 0px auto 100px;
-    box-shadow:0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1.25rem !important;
     border: 1px solid;
 }
+
 .login-content {
     background: url(../utils/image/shotLabPools.jpg) center center no-repeat;
     background-repeat: no-repeat;
@@ -80,6 +81,7 @@ div.login-footer a:hover {
     position: absolute;
     width: 100%;
 }
+
 /* .form-input {
     outline: none;
     border: lavender 1px solid;
@@ -110,12 +112,15 @@ div.login-footer a:hover {
     text-align: center;
     color: white;
 }
-div.signUp-link{
+
+div.signUp-link {
     cursor: pointer;
 }
-div.signUp-link:hover{
+
+div.signUp-link:hover {
     color: crimson;
 }
+
 /* input[type=checkbox]+label {
     color: #ccc;
     font-style: italic;
@@ -212,10 +217,27 @@ input[type="checkbox"]:checked+label::before {
     pointer-events: none;
     top: 32px;
     left: 12px;
-    transition: 0.3s ease all;
+    transition: 0.4s ease all;
+}
+.user-input-wrp input[type="email"]:empty .floating-label {
+    position: absolute;
+    pointer-events: none;
+    top: 32px;
+    left: 12px;
+    transition: 0.4s ease all;
+}
+.user-input-wrp input:focus~.floating-label, .user-input-wrp input:not(:focus):valid~.floating-label
+ {
+    top: 24px;
+    left: 12px;
+    font-size: 10px;
+    opacity: 1;
 }
 
-.user-input-wrp input:focus~.floating-label, .user-input-wrp input:not(:focus):valid~.floating-label {
+.user-input-wrp input[type='email']:focus~.floating-label,
+.user-input-wrp input[type='email']:not(:focus):valid~.floating-label,
+.user-input-wrp input[type='email']:not([value=""]):not(:focus)~.floating-label
+{
     top: 24px;
     left: 12px;
     font-size: 10px;
@@ -225,20 +247,29 @@ input[type="checkbox"]:checked+label::before {
 .user-input-wrp input:not(:focus):valid {
     border: 1px crimson solid;
 }
+
+.user-input-wrp input[type='email']:not(:focus):valid,
+.user-input-wrp input[type='email']:not([value=""]):not(:focus) {
+    border: 1px crimson solid;
+}
+
 /* signUp Form 
 
 */
-.signUp-form{
-    margin : 175px 0px 0px 0px;
+
+.signUp-form {
+    margin: 175px 0px 0px 0px;
     position: absolute;
     width: 100%;
+    transition: 0.7 all;
+    transition-delay: 2s;
 }
 
-
-
-
-
-
+.mdi-asterisk {
+    font-size: 6px;
+    color: crimson;
+    vertical-align: text-top;
+}
 
 @media only screen and (max-width: 480px) {
     .login-sidebar {
