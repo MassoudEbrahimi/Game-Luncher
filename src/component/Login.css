@@ -110,7 +110,12 @@ div.login-footer a:hover {
     text-align: center;
     color: white;
 }
-
+div.signUp-link{
+    cursor: pointer;
+}
+div.signUp-link:hover{
+    color: crimson;
+}
 /* input[type=checkbox]+label {
     color: #ccc;
     font-style: italic;
@@ -220,6 +225,20 @@ input[type="checkbox"]:checked+label::before {
 .user-input-wrp input:not(:focus):valid {
     border: 1px crimson solid;
 }
+/* signUp Form 
+
+*/
+.signUp-form{
+    margin : 175px 0px 0px 0px;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+
+
+
 
 @media only screen and (max-width: 480px) {
     .login-sidebar {
