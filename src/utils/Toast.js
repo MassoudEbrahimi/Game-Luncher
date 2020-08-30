@@ -5,7 +5,7 @@ import {toast} from 'react-toastify'
 
 class Toast {
     Success(){
-        toast.success("",{
+        toast.success("Create User Success Compelete",{
             autoClose : 2000
         })
     }

@@ -6,6 +6,7 @@ import "./component/Login.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "react-bootstrap/dist/react-bootstrap.js"
 import "font-awesome/css/font-awesome.css"
+import Routes from './Routes';
 
 class App extends Component {
   state = {}
@@ -13,7 +14,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className="">
-          <Login />
+          <Routes />
         </div>
       </React.Fragment>
     );
