@@ -39,9 +39,6 @@ class Login extends Component {
         } catch (error) {
             Toast.Error()
         }
-
-
-
     }
     handleformSignup = async (e) => {
         const { newEmail, newPassword, newUser } = this.state
@@ -171,7 +168,7 @@ class Login extends Component {
                     </div>
                     <div className="login-footer">
                         <div>
-                            <div className="signUp-link" onClick={e => this.setState({ activeTabID: 0 })}><span className="fa fa-home" style={{ fontSize: "32px" }} /></div>
+                            <div className="signUp-link" onClick={e => this.setState({ activeTabID: 0 })}><span className="mdi mdi-home" style={{ fontSize: "32px" }} /></div>
                         </div>
                         {/* <div>
                             <a href="./"><span style={{ float: "left" }}>CANT'T SIGN IN?</span></a>
