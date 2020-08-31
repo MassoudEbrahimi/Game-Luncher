@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from './sidebar'
+import "./Masterpage.css"
 
 
 class MasterPage extends Component {

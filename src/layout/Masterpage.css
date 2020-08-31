@@ -1,0 +1,152 @@
+/* Global */
+
+span.title-achievement {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 5px 0 5px 25px;
+}
+
+div.list-content-data ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.list-content-data ul li {
+    display: inline;
+}
+
+/*Achievements*/
+
+div.achievements-content {
+    min-height: 210px;
+    max-height: 30vh;
+    background-color: #d9d9d9;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+ul li div.achievement-card {
+    width: 150px;
+    height: 150px;
+    background-color: #aaaaaa;
+    margin: 10px 0px 0px 30px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: auto;
+    text-align: center;
+}
+
+div.achievement-card img {
+    margin: 6px 0px auto 0px;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    z-index: 100;
+}
+
+/* MOds */
+
+div.Mods-content {
+    min-height: 320px;
+    max-height: 36.7vh;
+    background-color: #d9d9d9;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+ul li div.Mods-card {
+    width: 190px;
+    height: 260px;
+    background-color: #aaaaaa;
+    margin: 2px 0px 0px 30px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: auto;
+    text-align: center;
+}
+
+div.Mods-card img {
+    margin: 0px 0px 0px 0px;
+    border-radius: 15px;
+    width: 190px;
+    height: 260px;
+    position: relative;
+    z-index: 100;
+}
+
+/* News */
+
+div.news-content {
+    min-height: 312px;
+    max-height: 33.3vh;
+    background-color: #d9d9d9;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+div.news-content-data {
+    width: 720px;
+    margin: 0px 0px 0px 30px;
+    display: inline-block
+}
+
+ul li div.news-card {
+    width: 400px;
+    height: 240px;
+    background-color: #aaaaaa;
+    display: inline-block;
+    /* display: inline-flex; */
+    border-radius: 15px;
+    text-align: center;
+}
+
+.new-text-content {
+    width: 300px;
+    height: 240px;
+    text-align: justify;
+    margin: 0px 0px 0px 5px;
+    padding: 0px 10px 0px 0px;
+    float: right;
+    white-space: normal;
+    overflow-y: scroll;
+}
+
+div.news-card img {
+    float: left;
+    border-radius: 15px;
+    width: 400px;
+    height: 240px;
+    position: relative;
+}
+
+/* Scroll Bar */
+.new-text-content::-webkit-scrollbar {
+    width: 5px;
+}
+.new-text-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #d9d9d9;
+    border-radius: 10px;
+}
+.new-text-content::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 10px;
+}
+.new-text-content::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+div.achievements-content::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+div.achievements-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+div.achievements-content::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 10px;
+}
+div.achievements-content::-webkit-scrollbar-thumb:hover {
+    background: red;
+}

@@ -18,6 +18,7 @@
     -moz-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
 }
+
 .sidebar img {
     width: 300px;
     margin: 25px 0 35px 0;
@@ -30,7 +31,10 @@
 }
 
 .sidebar-parents>li {
-    position: relative
+    position: relative;
+    /* -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75); */
 }
 
 .sidebar-parents>li>Link>i {
@@ -42,9 +46,9 @@
 
 .sidebar-parents>li>a {
     display: block;
-    color: crimson;
+    color: black;
     display: flex;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: bold;
     justify-content: start;
     align-items: center;
@@ -52,18 +56,29 @@
 }
 
 .sidebar-parents>li:hover>a, .sidebar-parents>li.active>a {
-    background: crimson;
-    color:yellow;
+    background: black;
+    color: white;
 }
 
 .sidebar-parents>li>a>span {
     font-size: 26px;
     padding-left: 18px
 }
-.active{
-    background: crimson;
-    color:yellow
+
+.active {
+    background: black;
+    color: white
 }
+
+/* Content */
+
+.page {
+    width: calc(100% - 270px);
+    position: relative;
+    left: 300px;
+    height: 100vh;
+}
+
 /* img[alt~="Game-Logo"]{
     font-size:8px;
     width:25px;
@@ -75,6 +90,7 @@ img[alt~="Game-Logo"]:hover{
     
 
 } */
+
 /* 
 .sidebar-parents>li>ul {
     position: absolute;
