@@ -1,5 +1,7 @@
 /* Global */
-
+masterpage-content{
+    background-color: #d9d9d9;
+}
 span.title-achievement {
     font-size: 28px;
     font-weight: bold;
@@ -19,8 +21,8 @@ div.list-content-data ul li {
 /*Achievements*/
 
 div.achievements-content {
-    min-height: 210px;
-    max-height: 30vh;
+    min-height: 220px;
+    height: 30vh;
     background-color: #d9d9d9;
     overflow-x: auto;
     white-space: nowrap;
@@ -35,6 +37,9 @@ ul li div.achievement-card {
     border-radius: 15px;
     padding: auto;
     text-align: center;
+    -webkit-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 div.achievement-card img {
@@ -64,6 +69,9 @@ ul li div.Mods-card {
     border-radius: 15px;
     padding: auto;
     text-align: center;
+    -webkit-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 div.Mods-card img {
@@ -79,7 +87,7 @@ div.Mods-card img {
 
 div.news-content {
     min-height: 312px;
-    max-height: 33.3vh;
+    height: 33.3vh;
     background-color: #d9d9d9;
     overflow-x: auto;
     white-space: nowrap;
@@ -88,7 +96,12 @@ div.news-content {
 div.news-content-data {
     width: 720px;
     margin: 0px 0px 0px 30px;
-    display: inline-block
+    display: inline-block;
+    background-color: #aaaaaa;
+    border-radius: 15px;
+    -webkit-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 ul li div.news-card {
@@ -102,35 +115,38 @@ ul li div.news-card {
 }
 
 .new-text-content {
+    text-indent: 10px;
     width: 300px;
-    height: 240px;
+    height: 245px;
     text-align: justify;
     margin: 0px 0px 0px 5px;
     padding: 0px 10px 0px 0px;
     float: right;
-    white-space: normal;
+    white-space: pre-wrap;
     overflow-y: scroll;
+    
 }
 
 div.news-card img {
     float: left;
     border-radius: 15px;
     width: 400px;
-    height: 240px;
+    height: 247px;
     position: relative;
 }
 
 /* Scroll Bar */
 .new-text-content::-webkit-scrollbar {
     width: 5px;
+    border-radius: 25px;
 }
 .new-text-content::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px #d9d9d9;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 .new-text-content::-webkit-scrollbar-thumb {
     background: crimson;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 .new-text-content::-webkit-scrollbar-thumb:hover {
     background: red;

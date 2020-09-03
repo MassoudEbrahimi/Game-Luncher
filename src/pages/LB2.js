@@ -17,17 +17,19 @@ class LB2Games extends Component {
         const { data } = this.state
         return (
             <MasterPage>
-                <div className="achievements-content">
-                    <span className="title-achievement" >Achievements</span>
-                    <Achievements data={data} />
-                </div>
-                <div className="Mods-content">
-                    <span className="title-achievement">Mods</span>
-                    <Mods data={data} />
-                </div>
-                <div className="news-content">
-                    <span className="title-achievement">News</span>
-                <News data={data} />
+                <div className="masterpage-content">
+                    <div className="achievements-content">
+                        <span className="title-achievement" >Achievements</span>
+                        <Achievements data={data} />
+                    </div>
+                    <div className="Mods-content">
+                        <span className="title-achievement">Mods</span>
+                        <Mods data={data} />
+                    </div>
+                    <div className="news-content">
+                        <span className="title-achievement">News</span>
+                        <News data={data} />
+                    </div>
                 </div>
             </MasterPage>
         );

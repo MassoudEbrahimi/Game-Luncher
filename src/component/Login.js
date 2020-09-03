@@ -20,20 +20,22 @@ class Login extends Component {
     componentDidMount() {
 
     }
-    handleformLogin = async (e) => {
-        e.preventdefault()
+    handleformLogin =  (e) => {
+        e.preventDefault();
         const { userName, password } = this.state;
         const request = {
             username: userName,
             password
         }
+        debugger
+        this.props.history.push("/LB-2")
         let result;
         try {
-            Handler.apiHandler((await LoginAuth(request)), (res, status) => {
+            Handler.apiHandler(( LoginAuth(request)), (res, status) => {
                 result = status
                 if (result === 200) {
                     Cookies.set("token", res.token)
-                    this.props.history.push("/masterpage")
+                    this.props.history.push("/LB-2")
                 }
             })
         } catch (error) {
@@ -41,6 +43,7 @@ class Login extends Component {
         }
     }
     handleformSignup = async (e) => {
+        e.preventDefault();
         const { newEmail, newPassword, newUser } = this.state
         const request = {
             username: newUser,
@@ -112,7 +115,6 @@ class Login extends Component {
     }
     signUpform = () => {
         const { newUser, newPassword, newEmail, confirmnewPassword } = this.state
-        debugger
         return (
             <React.Fragment>
                 <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-Top" alt="" />
@@ -183,7 +185,6 @@ class Login extends Component {
     }
     render() {
         const { activeTabID } = this.state
-        debugger
         return (
             <React.Fragment>
                 <div className="d-flex login-content">
