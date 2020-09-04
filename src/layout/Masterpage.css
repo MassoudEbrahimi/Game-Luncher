@@ -8,7 +8,6 @@ span.title-achievement {
     margin: 5px 0 10px 30px;
     position: fixed;
 }
-
 div.list-content-data ul {
     list-style-type: none;
     margin: 0;
@@ -24,16 +23,20 @@ div.list-content-data ul li {
 div.achievements-content {
     min-height: 140px;
     height: 10vh;
+    margin: 0px 30px 0px 0px;
     background-color: #d9d9d9;
     overflow-x: auto;
     white-space: nowrap;
+
+
+    
 }
 
 ul li div.achievement-card {
     width: 80px;
     height: 80px;
     background-color: #aaaaaa;
-    margin: 40px 0px 0px 20px;
+    margin: 40px 15px 0px 15px;
     display: inline-block;
     border-radius: 15px;
     padding: auto;
@@ -56,6 +59,7 @@ div.achievement-card img {
 div.Mods-content {
     min-height: 280px;
     max-height: 35vh;
+    margin: 0px 30px 0px 0px;
     background-color: #d9d9d9;
     overflow-x: auto;
     white-space: nowrap;
@@ -65,7 +69,7 @@ ul li div.Mods-card {
     width: 170px;
     height: 220px;
     background-color: #aaaaaa;
-    margin: 40px 0px 0px 30px;
+    margin: 40px 15px 0px 15px;
     display: inline-block;
     border-radius: 15px;
     padding: auto;
@@ -89,6 +93,7 @@ div.Mods-card img {
 div.news-content {
     min-height: 260px;
     height: 40vh;
+    margin: 0px 30px 0px 0px;
     background-color: #d9d9d9;
     overflow-x: auto;
     white-space: nowrap;
@@ -96,7 +101,7 @@ div.news-content {
 
 div.news-content-data {
     width: 700px;
-    margin: 40px 0px 0px 30px;
+    margin: 40px 20px 0px 20px;
     display: inline-block;
     background-color: #aaaaaa;
     border-radius: 15px;
