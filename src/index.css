@@ -2,9 +2,14 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden !important;
+  overflow-y: hidden !important;
   font-family: "MADE-TOMMY" !important;
-  
 }
+
 a {
-  text-decoration : none !important
+  text-decoration: none !important
+}
+
+div.loading-logo {
+  margin: auto;
 }

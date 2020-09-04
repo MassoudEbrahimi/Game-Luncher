@@ -5,7 +5,8 @@ masterpage-content{
 span.title-achievement {
     font-size: 20px;
     font-weight: bold;
-    margin: 10px 0 5px 30px;
+    margin: 5px 0 10px 30px;
+    position: fixed;
 }
 
 div.list-content-data ul {
@@ -21,7 +22,7 @@ div.list-content-data ul li {
 /*Achievements*/
 
 div.achievements-content {
-    min-height: 160px;
+    min-height: 140px;
     height: 10vh;
     background-color: #d9d9d9;
     overflow-x: auto;
@@ -29,10 +30,10 @@ div.achievements-content {
 }
 
 ul li div.achievement-card {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #aaaaaa;
-    margin: 10px 0px 0px 20px;
+    margin: 40px 0px 0px 20px;
     display: inline-block;
     border-radius: 15px;
     padding: auto;
@@ -44,8 +45,8 @@ ul li div.achievement-card {
 
 div.achievement-card img {
     margin: 6px 0px auto 0px;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     position: relative;
     z-index: 9999;
 }
@@ -62,9 +63,9 @@ div.Mods-content {
 
 ul li div.Mods-card {
     width: 170px;
-    height: 230px;
+    height: 220px;
     background-color: #aaaaaa;
-    margin: 2px 0px 0px 30px;
+    margin: 40px 0px 0px 30px;
     display: inline-block;
     border-radius: 15px;
     padding: auto;
@@ -78,7 +79,7 @@ div.Mods-card img {
     margin: 0px 0px 0px 0px;
     border-radius: 15px;
     width: 170px;
-    height: 230px;
+    height: 220px;
     position: relative;
     z-index: 100;
 }
@@ -95,7 +96,7 @@ div.news-content {
 
 div.news-content-data {
     width: 700px;
-    margin: 0px 0px 0px 30px;
+    margin: 40px 0px 0px 30px;
     display: inline-block;
     background-color: #aaaaaa;
     border-radius: 15px;
@@ -165,5 +166,35 @@ div.achievements-content::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 div.achievements-content::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+div.Mods-content::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+div.Mods-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+div.Mods-content::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 10px;
+}
+div.Mods-content::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+div.news-content::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+div.news-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+div.news-content::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 10px;
+}
+div.news-content::-webkit-scrollbar-thumb:hover {
     background: red;
 }
