@@ -9,7 +9,7 @@ class Achievements extends Component {
         this.state = {}
     }
     render() {
-        // if (this.props.data === null) return <Loading />
+        if (this.props.data === null) return <Loading />
         return (
             <React.Fragment>
                 <div className="list-content-data">

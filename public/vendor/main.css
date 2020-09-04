@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MADE-TOMMY';
+    src: url('font/MADETOMMY-ExtraBold.woff2') format('woff2'),
+        url('font/MADETOMMY-ExtraBold.woff') format('woff'),
+        url('font/MADETOMMY-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
