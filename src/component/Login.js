@@ -159,12 +159,12 @@ class Login extends Component {
                     </div>
                     <div className="login-Checkbox">
                         <input name="" id="remeberMe" className="remember-login" type="checkbox" value="" />
-                        <label className="login-checkmark" for="remeberMe" >I agree all statments in terms of service</label>
+                        <label className="login-checkmark" for="remeberMe" style={{fontSize:"14px"}} >I agree all statments in terms of service</label>
                     </div>
                     <div className="text-center">
                         <button className={
                             (newPassword === null & newUser === null) || (newPassword === "" & newUser === "") ?
-                                "btn-login-defualt" : "btn-login-submit"}>
+                                "btn-login-defualt-signup" : "btn-login-submit-signup"}>
                             <span className="mdi mdi-login-variant" />
                         </button>
                     </div>
