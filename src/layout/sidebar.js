@@ -12,10 +12,16 @@ class Sidebar extends Component {
                 <ul className="sidebar-parents">
                     {Data.map(node => {
                         return (
-                            <li key={node.id}><Link to={node.link}>{node.title}</Link></li>
+                            <li className={node.link === window.location.pathname ? "sidebar-active d-flex" : "d-flex"} key={node.id}>
+                                <Link to={node.link}>{node.title}</Link>
+                                <Link className="button-playGame" to={node.link}><span className="mdi mdi-play-circle" /></Link>
+                            </li>
                         )
                     })}
                 </ul>
+                <div className="sidebar-signout">
+                    <Link to="/"><span className="mdi mdi-logout" />SignOut</Link>
+                </div>
             </div>
         )
     }

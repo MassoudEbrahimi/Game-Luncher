@@ -18,7 +18,12 @@
     -moz-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
 }
-
+.sidebar-active {
+    background: black;
+}
+.sidebar-active > a {
+    color: white !important;
+}
 .sidebar img {
     width: 300px;
     margin: 25px 0 35px 0;
@@ -61,16 +66,46 @@
     color: white;
     cursor: pointer;
 }
-
-.sidebar-parents>li>a>span {
-    font-size: 26px;
-    padding-left: 18px
-}
-
-.active {
+.sidebar-parents>li:hover, .sidebar-parents>li.active>a {
     background: black;
-    color: white
+    color: white;
+    cursor: pointer;
 }
+
+/* .sidebar-parents>li>a>span {
+    font-size:40px;
+    padding-left: 18px
+} */
+.sidebar-signout{
+    bottom: 20px;
+    position: absolute;
+    cursor: pointer;
+
+}
+.sidebar-signout > a{
+    color: crimson;
+    cursor: pointer;
+}
+.sidebar-signout > a:hover{
+    color: black;
+    cursor: pointer;
+}
+a.button-playGame{
+    font-size: 40px !important;
+    position: absolute;
+    right: 0;
+    padding: 0;
+
+}
+.sidebar-parents>li>a.button-playGame{
+    padding: 0px 10px 0px 10px;
+}
+.sidebar-parents>li>a.button-playGame>span:hover{
+    color:crimson;
+    
+}
+
+
 
 /* Content */
 

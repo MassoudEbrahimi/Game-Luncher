@@ -203,3 +203,18 @@ div.news-content::-webkit-scrollbar-thumb {
 div.news-content::-webkit-scrollbar-thumb:hover {
     background: red;
 }
+
+
+
+/* Images Page */
+#comingSoon{
+    background: url(../utils/image/LimboPage.jpg) center center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    object-fit: cover;
+    height: 100vh;
+    padding: 0px !important;
+    margin: 0px !important;
+    position: relative;
+    outline: none;
+}
