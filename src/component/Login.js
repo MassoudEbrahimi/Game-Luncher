@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // import Toast from "../utils/Toast"
 import SignIn from '../pages/SignIn';
 import SignOut from '../pages/Signout';
+
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -24,8 +25,8 @@ class Login extends Component {
             <React.Fragment>
                 <div className="d-flex login-content">
                     <div className="login-sidebar card " >
-                        {activeTabID === 0 && <SignIn handleTab={this.handleTabSignin} />}
-                        {activeTabID === 1 && <SignOut handleTab={this.handleTabSignout} />}
+                            {activeTabID === 0 && <SignIn handleTab={this.handleTabSignin} />}
+                            {activeTabID === 1 && <SignOut handleTab={this.handleTabSignout} />}
                     </div>
                     {/* <div className="login-content col-sm-5 col-md-8 col-lg-8">
                     </div> */}

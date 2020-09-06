@@ -76,7 +76,9 @@ class SignIn extends Component {
                     </div>
                     <div className="login-footer">
                         <div>
-                            <div className="signUp-link" onClick={() => this.props.handleTab()}><span>CREATE ACCOUNT</span></div>
+                            <div className="signUp-link" 
+                            onClick={() => this.props.handleTab()}
+                            ><span>CREATE ACCOUNT</span></div>
                         </div>
                         <div>
                             <a href="./"><span style={{ float: "left" }}>CANT'T SIGN IN?</span></a>
