@@ -100,6 +100,7 @@ div.login-footer a:hover {
     font-size: 30px;
     text-align: center;
     color: crimson;
+    outline: none !important;
 }
 
 .btn-login-submit {
@@ -111,6 +112,7 @@ div.login-footer a:hover {
     font-size: 30px;
     text-align: center;
     color: white;
+    outline: none !important;
 }
 .btn-login-submit-signup{
     margin-top: 10px;
