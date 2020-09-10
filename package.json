@@ -1,6 +1,7 @@
 {
   "name": "login",
   "version": "0.1.0",
+  "homepage": "http://mocrahimi-001-site1.ftempurl.com/",
   "private": true,
   "dependencies": {
     "@mdi/font": "^5.5.55",
@@ -21,11 +22,13 @@
     "react-scripts": "3.4.3",
     "react-toastify": "^6.0.8",
     "react-transition-group": "^4.4.1",
+    "source-map-explorer": "^2.5.0",
     "styled-components": "^5.2.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts --max_old_space_size=10240 build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

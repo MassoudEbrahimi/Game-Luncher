@@ -5,6 +5,7 @@ import "./component/Login.css"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "react-bootstrap/dist/react-bootstrap.js"
+import "@mdi/font/css/materialdesignicons.css"
 
 import Routes from './Routes';
 
