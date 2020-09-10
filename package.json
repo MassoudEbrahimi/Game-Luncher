@@ -21,9 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-toastify": "^6.0.8",
-    "react-transition-group": "^4.4.1",
-    "source-map-explorer": "^2.5.0",
-    "styled-components": "^5.2.0"
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
