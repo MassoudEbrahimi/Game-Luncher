@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (async function () {
+            await CefSharp.BindObjectAsync("cefCustomObjectMain");
+        })();
+    </script>
+    <button class="btn btn-info" onclick="cefCustomObjectMain.showDevTools();">Open Chrome Dev Tools</button>
+    <button class="btn btn-primary" onclick="cefCustomObjectMain.opencmd();">Open cmd.exe</button>
+    <button class="btn btn-primary" onclick="cefCustomObjectMain.add(5,6).then((result) => {
+        alert(result);
+    }).catch((err) => {
+        
+    });;">calc</button>
+</body>
+</html>

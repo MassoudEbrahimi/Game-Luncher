@@ -1,5 +1,5 @@
 .login-sidebar {
-    background: white;
+    background-color: #121212 !important;
     /* overflow-y: auto; */
     overflow: hidden;
     width: 400px;
@@ -80,6 +80,7 @@ div.login-footer a:hover {
     margin: 190px 0px 0px 0px;
     position: absolute;
     width: 100%;
+    
 }
 
 /* .form-input {
@@ -93,7 +94,7 @@ div.login-footer a:hover {
 
 .btn-login-defualt {
     margin-top: 15px;
-    background-color: ghostwhite;
+    background-color: #121212;
     border: 2px ghostwhite solid;
     padding: 5px 15px;
     border-radius: 15px;
@@ -128,7 +129,7 @@ div.login-footer a:hover {
 }
 .btn-login-defualt-signup {
     margin-top: 10px;
-    background-color: ghostwhite;
+    background-color: #121212;
     border: 2px ghostwhite solid;
     padding: 5px 15px;
     border-radius: 15px;

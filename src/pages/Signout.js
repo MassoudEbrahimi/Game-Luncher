@@ -24,7 +24,6 @@ class SignOut extends Component {
             password: newPassword,
             email: newEmail
         }
-        let result
         try {
             Handler.apiHandler((await SignUpuser(request)), (res, status) => {
                 if (status === 200) {

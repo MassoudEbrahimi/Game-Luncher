@@ -5,19 +5,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <meta name="description" content="EverFall-Games" />
 
   <link rel="stylesheet" href="vendor/main.css">
   <link rel="stylesheet" href="vendor/ReactToastify/dist/ReactToastify.css">
   <link rel="stylesheet"
     href="vendor/MaterialDesign-Webfont-master/MaterialDesign-Webfont-master/css/materialdesignicons.css">
-  <title>React App</title>
+  <title>EverFall-Games</title>
 </head>
 
 <body>
   <div id="root"></div>
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+     <script>
+      (async function () {
+          await CefSharp.BindObjectAsync("cefCustomObjectMain");
+      })();
   </script>
 </body>
 

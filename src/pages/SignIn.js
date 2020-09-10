@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 
-import Handler from "../utils/Handler"
-import Toast from '../utils/Toast'
-import { LoginAuth } from '../utils/axios'
-import Cookies from 'js-cookie'
+import $ from 'jquery'
 
 class SignIn extends Component {
     constructor(props) {
@@ -14,27 +11,35 @@ class SignIn extends Component {
             password: null
         }
     }
-    handleformLogin = (e) => {
+
+
+    
+    handleformLogin = async (e) => {
         e.preventDefault();
-        const { userName, password } = this.state;
-        const request = {
-            username: userName,
-            password
-        }
         debugger
-        window.location="/LB-2"
-        let result;
-        try {
-            Handler.apiHandler((LoginAuth(request)), (res, status) => {
-                result = status
-                if (result === 200) {
-                    Cookies.set("token", res.token)
-                    this.props.history.push("/LB-2")
-                }
-            })
-        } catch (error) {
-            Toast.Error()
-        }
+        $('<script>(async function () { await CefSharp.BindObjectAsync("cefCustomObjectMain");})(); cefCustomObjectMain.add('+this.state.userName+','+this.state.password+').then((result) => {alert(result);})</' + 'script>').appendTo(document.body);
+        /*await CefSharp.BindObjectAsync("cefCustomObjectMain");*/
+        
+        /*  e.preventDefault();
+          const { userName, password } = this.state;
+          const request = {
+              username: userName,
+              password
+          }
+          debugger
+          window.location="/LB-2"
+          let result;
+          try {
+              Handler.apiHandler((LoginAuth(request)), (res, status) => {
+                  result = status
+                  if (result === 200) {
+                      Cookies.set("token", res.token)
+                      this.props.history.push("/LB-2")
+                  }
+              })
+          } catch (error) {
+              Toast.Error()
+          }*/
     }
     login = () => {
         const { userName, password } = this.state
@@ -48,7 +53,7 @@ class SignIn extends Component {
                     <img src="images/Everfall.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
 
                 </div>
-                <form className="login-form" onSubmit={this.handleformLogin}>
+                <form className="login-form" id="btn-login" onSubmit={this.handleformLogin}>
                     <div class="user-input-wrp">
                         <br />
                         <input type="text" class="inputText" required
@@ -85,6 +90,7 @@ class SignIn extends Component {
                     </div>
                 </form>
                 <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-bottom" alt="" />
+
             </>
         )
     }

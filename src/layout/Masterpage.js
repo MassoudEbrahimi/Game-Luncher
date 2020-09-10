@@ -8,6 +8,7 @@ class MasterPage extends Component {
     render() {
         return (
             <div className="page">
+                
                 <Sidebar />
                 <div className="content">
                 {this.props.children}
