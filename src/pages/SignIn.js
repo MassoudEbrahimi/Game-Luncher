@@ -63,7 +63,7 @@ class SignIn extends Component {
                         <div>
                             <Link className="signUp-link"
                                 //  onClick={() => this.props.handleTab()}
-                                to="/singup"
+                                to="/signup"
                             ><span>CREATE ACCOUNT</span></Link>
                         </div>
                         <div>

@@ -17,7 +17,7 @@ function Routes(props) {
             {/* Login */}
 
             <Route exact path="/" component={SignIn} />
-            <Route exact path="/singup" component={SignOut} />
+            <Route exact path="/signup" component={SignOut} />
         </Router>
     )
 }

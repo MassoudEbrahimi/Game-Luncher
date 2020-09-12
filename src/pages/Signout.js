@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 import $ from 'jquery'
 import Login from '../component/Login';
+import { Link } from 'react-router-dom';
 
 
-class SignOut extends Component {
+class SignUp extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -76,7 +77,9 @@ class SignOut extends Component {
                     </div>
                     <div className="login-footer">
                         <div>
-                            <div className="signUp-link" onClick={() => this.props.handleTab()}><span className="mdi mdi-home" style={{ fontSize: "32px" }} /></div>
+                            <Link to="/" className="signUp-link" 
+                            // onClick={() => this.props.handleTab()}
+                            ><span className="mdi mdi-home" style={{ fontSize: "32px" }} /></Link>
                         </div>
                         {/* <div>
                             <a href="./"><span style={{ float: "left" }}>CANT'T SIGN IN?</span></a>
@@ -101,4 +104,4 @@ class SignOut extends Component {
     }
 }
 
-export default SignOut;
+export default SignUp;
