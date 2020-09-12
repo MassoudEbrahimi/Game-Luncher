@@ -7,8 +7,9 @@ import Limbo from './pages/Limbo';
 
 
 function Routes(props) {
+    debugger
     return (
-        <Router>
+        <Router >
             <Route exact path="/" component={Login} />
             <Route exact path="/LB-2" component={LB2Games} />
             <Route exact path="/Limbo" component={Limbo} />
