@@ -4,11 +4,9 @@ import "./Masterpage.css"
 
 
 class MasterPage extends Component {
-    state = {}
     render() {
         return (
             <div className="page">
-                
                 <Sidebar />
                 <div className="content">
                 {this.props.children}

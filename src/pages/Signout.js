@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
-import Handler from '../utils/Handler'
-import Toast from "../utils/Toast"
-import { SignUpuser } from '../utils/axios'
-
+import $ from 'jquery'
+import Login from '../component/Login';
 
 
 class SignOut extends Component {
@@ -19,31 +17,18 @@ class SignOut extends Component {
     handleformSignup = async (e) => {
         e.preventDefault();
         const { newEmail, newPassword, newUser } = this.state
-        const request = {
-            username: newUser,
-            password: newPassword,
-            email: newEmail
-        }
-        try {
-            Handler.apiHandler((await SignUpuser(request)), (res, status) => {
-                if (status === 200) {
-                    Toast.Success()
-                }
-            })
-        } catch (error) {
-
-        }
+        $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.signup('" + newUser + "','" + newPassword + "','" + newEmail + "').then((result) => {if(result = 'true') { window.location='/LB-2'}})</script>").appendTo(document.body);
     }
     Logout = () => {
         const { newUser, newPassword, newEmail, confirmnewPassword } = this.state
         return (
             <>
-                <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-Top" alt="" />
+                <img src="images/Art.svg" className="img-fluid ArtImg-Top" alt="" />
                 <a className="login-weblink" href="./">
                     <span class="mdi mdi-help"></span>
                 </a>
                 <div className="login-logo">
-                    <img src="images/Everfall.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+                    <img src="images/Everfall.svg" class="img-fluid" alt="" />
                     <br />
                     <br />
                     <br />
@@ -100,7 +85,7 @@ class SignOut extends Component {
                     </div>
 
                 </form>
-                <img src="images/Art.svg" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} ArtImg-bottom" alt="" />
+                <img src="images/Art.svg" className="img-fluid ArtImg-bottom" alt="" />
             </>
         )
     }
@@ -108,7 +93,9 @@ class SignOut extends Component {
 
         return (
             <React.Fragment>
-                {this.Logout()}
+                <Login>
+                    {this.Logout()}
+                </Login>
             </React.Fragment>
         )
     }

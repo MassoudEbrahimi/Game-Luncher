@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router-dom'
 import $ from 'jquery'
+import Login from '../component/Login';
 
 
 class SignIn extends Component {
@@ -13,12 +15,12 @@ class SignIn extends Component {
     }
 
 
-    
+
     handleformLogin = async (e) => {
         e.preventDefault();
         debugger
         // $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.add('"+this.state.userName+"','"+this.state.password+"').then((result) => {alert(result);})</script>").appendTo(document.body);
-        $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.login('"+this.state.userName+"','"+this.state.password+"').then((result) => {if(result = 'true') { window.location='/LB-2'}})</script>").appendTo(document.body);
+        $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.login('" + this.state.userName + "','" + this.state.password + "').then((result) => {if(result = 'true') { window.location='/LB-2'}})</script>").appendTo(document.body);
     }
     login = () => {
         const { userName, password } = this.state
@@ -59,7 +61,10 @@ class SignIn extends Component {
                     </div>
                     <div className="login-footer">
                         <div>
-                            <div className="signUp-link" onClick={() => this.props.handleTab()}><span>CREATE ACCOUNT</span></div>
+                            <Link className="signUp-link"
+                                //  onClick={() => this.props.handleTab()}
+                                to="/singup"
+                            ><span>CREATE ACCOUNT</span></Link>
                         </div>
                         <div>
                             <a href="./"><span style={{ float: "left" }}>CANT'T SIGN IN?</span></a>
@@ -76,7 +81,9 @@ class SignIn extends Component {
 
         return (
             <React.Fragment>
-                {this.login()}
+                <Login>
+                    {this.login()}
+                </Login>
             </React.Fragment>
         )
     }
