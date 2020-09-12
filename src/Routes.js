@@ -5,9 +5,9 @@ import LB2Games from './pages/LB2';
 import Limbo from './pages/Limbo';
 import SignIn from './pages/SignIn';
 import SignOut from './pages/Signout';
-
-
+import PageShell from './utils/Animate'
 function Routes(props) {
+
     return (
         <Router >
             {/*Achievement */}
@@ -15,10 +15,9 @@ function Routes(props) {
             <Route exact path="/LB-2" component={LB2Games} />
             <Route exact path="/Limbo" component={Limbo} />
             {/* Login */}
-
-            <Route exact path="/" component={SignIn} />
-            <Route exact path="/signup" component={SignOut} />
-        </Router>
+                <Route exact path="/" component={PageShell(SignIn)} />
+                <Route exact path="/signup" component={PageShell(SignOut)} />
+        </Router >
     )
 }
 
