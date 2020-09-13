@@ -20,7 +20,7 @@
 }
 .sidebar-active {
     background: black;
-    border-left: 6px crimson dashed;
+    border-left: 5px crimson solid;
     cursor: pointer !important;
 }
 .sidebar-active div > a {
@@ -44,7 +44,7 @@
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75); */
 }
 .sidebar-parents>li:hover{
-    border-left: crimson 6px dashed;
+    border-left: crimson 5px solid;
 }
 
 div.game-text{
