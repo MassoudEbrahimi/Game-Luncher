@@ -20,7 +20,7 @@
 }
 .sidebar-active {
     background: black;
-    border-left: 8px white solid;
+    border-left: 6px crimson dashed;
 }
 .sidebar-active div > a {
     color: white !important;
@@ -43,17 +43,15 @@
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75); */
 }
 
-.sidebar-parents>li>div>a>span {
-    
-}
 div.game-text{
     width: 100%;
 }
 div.Game-progressBar{
     width: 90%;
     margin: auto;
-    padding: 0px 0px 2px 0px;
+    padding: 0px 0px 5px 0px;
     display: flex;
+    color: whitesmoke;
 }
 .sidebar-parents>li>div>a.text-game {
     display: inline-block;
