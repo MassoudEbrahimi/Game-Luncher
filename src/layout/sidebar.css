@@ -20,8 +20,9 @@
 }
 .sidebar-active {
     background: black;
+    border-left: 8px white solid;
 }
-.sidebar-active > a {
+.sidebar-active div > a {
     color: white !important;
 }
 .sidebar img {
@@ -36,32 +37,51 @@
 }
 
 .sidebar-parents>li {
-    position: relative;
+    width: 100%;
     /* -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75); */
 }
 
-.sidebar-parents>li>Link>i {
-    position: absolute;
-    left: 16px;
-    top: 10px;
-    font-size: 22px
+.sidebar-parents>li>div>a>span {
+    
 }
-
-.sidebar-parents>li>a {
-    display: block;
-    color: black;
+div.game-text{
+    width: 100%;
+}
+div.Game-progressBar{
+    width: 90%;
+    margin: auto;
+    padding: 0px 0px 2px 0px;
     display: flex;
-    font-size: 37px;
+}
+.sidebar-parents>li>div>a.text-game {
+    display: inline-block;
+    color: black;
+    font-size: 33px;
     font-weight: bold;
     justify-content: start;
     align-items: center;
+    width: 80%;
     padding: 4px 28px;
     
 }
-
-.sidebar-parents>li:hover>a, .sidebar-parents>li.active>a {
+.sidebar-parents>li>div>a.button-playGame {
+    display: block;
+    color: black;
+    width: 20%;
+    font-size: 33px;
+    font-weight: bold;
+    justify-content: start;
+    align-items: center;
+    padding: 4px 0px;
+    
+}
+.sidebar-parents>li>div>a.button-playGame>span:hover{
+    color:crimson;
+    
+}
+.sidebar-parents>li>div:hover>a, .sidebar-parents>li.active>a {
     background: black;
     color: white;
     cursor: pointer;
@@ -89,20 +109,6 @@
 .sidebar-signout > a:hover{
     color: black;
     cursor: pointer;
-}
-a.button-playGame{
-    font-size: 40px !important;
-    position: absolute;
-    right: 0;
-    padding: 0;
-
-}
-.sidebar-parents>li>a.button-playGame{
-    padding: 0px 10px 0px 10px;
-}
-.sidebar-parents>li>a.button-playGame>span:hover{
-    color:crimson;
-    
 }
 
 
