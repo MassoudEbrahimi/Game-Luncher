@@ -25,7 +25,8 @@ class SignIn extends Component {
     login = () => {
         const { userName, password } = this.state
         return (
-            <>
+
+            <div className="signIn-page">
                 <img src="images/Art.svg" className="img-fluid ArtImg-Top" alt="" />
                 <a className="login-weblink" href="./">
                     <span class="mdi mdi-help"></span>
@@ -73,8 +74,8 @@ class SignIn extends Component {
                     </div>
                 </form>
                 <img src="images/Art.svg" className="img-fluid ArtImg-bottom" alt="" />
+            </div>
 
-            </>
         )
     }
     render() {

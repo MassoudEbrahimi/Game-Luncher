@@ -47,9 +47,8 @@ class Sidebar extends Component {
                                     <Link className="button-playGame" to={node.link}><span className="mdi mdi-play-circle" /></Link>
                                 </div>
                                 <div className="Game-progressBar" >
-
                                     <ProgressBar progressPercent={progressPercentage} />
-                                    <span style={{ marginTop: "-3px", position: "absolute", left: "30px" }}>Downloading ...</span>
+                                    <span style={{ marginTop: "0px", position: "absolute", left: "30px",fontSize:"14px" }}>Downloading ...</span>
                                     <span style={{ marginTop: "-3px", position: "absolute", right: "30px" }}>
                                         {0 > progressPercentage ? 0 : progressPercentage > 100 ? 100 : progressPercentage}%
                                         </span>
