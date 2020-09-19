@@ -15,8 +15,8 @@ function Routes(props) {
             <Route exact path="/LB-2" component={LB2Games} />
             <Route exact path="/Limbo" component={Limbo} />
             {/* Login */}
-                <Route exact path="/" component={PageShell(SignIn)} />
-                <Route exact path="/signup" component={PageShell(SignOut)} />
+            <Route exact path="/" component={SignIn} />
+            <Route exact path="/signup" component={SignOut} />
         </Router >
     )
 }

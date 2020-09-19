@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import $ from 'jquery'
 import Login from '../component/Login';
-
+import PageShell from '../utils/Animate'
 
 class SignIn extends Component {
     constructor(props) {
@@ -25,7 +25,6 @@ class SignIn extends Component {
     login = () => {
         const { userName, password } = this.state
         return (
-
             <div className="signIn-page">
                 <img src="images/Art.svg" className="img-fluid ArtImg-Top" alt="" />
                 <a className="login-weblink" href="./">
@@ -73,13 +72,12 @@ class SignIn extends Component {
                         </div>
                     </div>
                 </form>
-                <img src="images/Art.svg" className="img-fluid ArtImg-bottom" alt="" />
+                <img src="images/Art.svg" className="img-fluid ArtImg-bottom-signin" alt="" />
             </div>
 
         )
     }
     render() {
-
         return (
             <React.Fragment>
                 <Login>

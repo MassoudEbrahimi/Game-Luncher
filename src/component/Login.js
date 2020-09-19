@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageShell from "../utils/Animate"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -19,7 +20,16 @@ class Login extends Component {
             <React.Fragment>
                 <div className="d-flex login-content">
                     <div className="login-sidebar card " >
-                        {this.props.children}
+                        <ReactCSSTransitionGroup
+                            transitionAppear={true}
+                            transitionAppearTimeout={600}
+                            transitionEnterTimeout={600}
+                            transitionLeaveTimeout={200}
+                            transitionName={window.location.pathname === '/signup' ? 'SlideIn' : window.location.pathname ==="/" ? "SlideIn" : "SlideOut" }
+                        >
+                            {this.props.children}
+                        </ReactCSSTransitionGroup>
+
                         {/* <Switch>
                             <Route exact path="/" component={SignIn} />
                             <Route exact path="/singup" component={SignOut} />

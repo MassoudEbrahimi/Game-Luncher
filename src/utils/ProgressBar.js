@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { data, post } from 'jquery';
 const Track = styled.div`
     width: 100%;
     height: 20px;

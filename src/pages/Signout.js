@@ -23,7 +23,7 @@ class SignUp extends Component {
     Logout = () => {
         const { newUser, newPassword, newEmail, confirmnewPassword } = this.state
         return (
-            <>
+            <div className="signIn-page">
                 <img src="images/Art.svg" className="img-fluid ArtImg-Top" alt="" />
                 <a className="login-weblink" href="./">
                     <span class="mdi mdi-help"></span>
@@ -77,7 +77,7 @@ class SignUp extends Component {
                     </div>
                     <div className="login-footer">
                         <div>
-                            <Link to="/" className="signUp-link" 
+                            <Link to="/" className="signUp-link"
                             // onClick={() => this.props.handleTab()}
                             ><span className="mdi mdi-home" style={{ fontSize: "32px" }} /></Link>
                         </div>
@@ -88,8 +88,9 @@ class SignUp extends Component {
                     </div>
 
                 </form>
-                <img src="images/Art.svg" className="img-fluid ArtImg-bottom" alt="" />
-            </>
+                <img src="images/Art.svg" className="img-fluid ArtImg-bottom-signup" alt="" />
+            </div>
+
         )
     }
     render() {
