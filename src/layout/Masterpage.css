@@ -2,6 +2,13 @@
 masterpage-content{
     background-color: #121212;
 }
+.page {
+    width: calc(100% - 300px);
+    background-color: #424242;
+    position: relative;
+    left: 300px;
+    height: 100vh;
+}
 span.title-achievement {
     font-size: 20px;
     font-weight: bold;
@@ -23,7 +30,7 @@ div.list-content-data ul li {
 div.achievements-content {
     min-height: 140px;
     height: 10vh;
-    margin: 0px 30px 0px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: #424242;
     overflow-x: auto;
     white-space: nowrap;
@@ -36,9 +43,9 @@ ul li div.achievement-card {
     width: 80px;
     height: 80px;
     background-color: #aaaaaa;
-    margin: 40px 15px 0px 15px;
+    margin: 40px 10px 0px 20px;
     display: inline-block;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: auto;
     text-align: center;
     -webkit-box-shadow: 10px 5px 15px 0px rgba(0, 0, 0, 0.75);
@@ -59,7 +66,7 @@ div.achievement-card img {
 div.Mods-content {
     min-height: 280px;
     max-height: 35vh;
-    margin: 0px 30px 0px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: #424242;
     overflow-x: auto;
     white-space: nowrap;
@@ -69,9 +76,9 @@ ul li div.Mods-card {
     width: 170px;
     height: 220px;
     background-color: #aaaaaa;
-    margin: 40px 15px 0px 15px;
+    margin: 40px 10px 0px 20px;
     display: inline-block;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: auto;
     text-align: center;
     -webkit-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
@@ -81,7 +88,7 @@ ul li div.Mods-card {
 
 div.Mods-card img {
     margin: 0px 0px 0px 0px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 170px;
     height: 220px;
     position: relative;
@@ -93,7 +100,7 @@ div.Mods-card img {
 div.news-content {
     min-height: 260px;
     height: 40vh;
-    margin: 0px 30px 0px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: #424242;
     overflow-x: auto;
     white-space: nowrap;
@@ -101,10 +108,10 @@ div.news-content {
 
 div.news-content-data {
     width: 700px;
-    margin: 40px 20px 0px 20px;
+    margin: 40px 10px 0px 20px;
     display: inline-block;
     background-color: #aaaaaa;
-    border-radius: 15px;
+    border-radius: 10px;
     -webkit-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 2px 15px 0px rgba(0, 0, 0, 0.75);
@@ -116,12 +123,12 @@ ul li div.news-card {
     background-color: #aaaaaa;
     display: inline-block;
     /* display: inline-flex; */
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
 }
 div.news-card img {
     float: left;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 400px;
     height: 217px;
     position: relative;
