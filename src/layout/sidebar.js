@@ -12,7 +12,7 @@ class Sidebar extends Component {
         }
     }
     componentDidMount = () => {
-        debugger
+        
         const { progressPercentage } = this.state
         if (progressPercentage < 0) this.setState({ progressPercentage: 0 })
         if (progressPercentage > 100) this.setState({ progressPercentage: 100 })

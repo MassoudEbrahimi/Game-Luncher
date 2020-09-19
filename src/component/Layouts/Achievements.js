@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Loading from '../loading/loading'
 import Data from '../../Data/AchievementData'
+import ImageList from '../../SlideShow/slideShow';
 
 class Achievements extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class Achievements extends Component {
                             return (
                                 <li>
                                     <div className="achievement-card">
+                                        {/* <ImageList images={Data} /> */}
                                         <img src={node.image} alt="achievements" />
                                     </div>
                                 </li>

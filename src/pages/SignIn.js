@@ -18,7 +18,6 @@ class SignIn extends Component {
 
     handleformLogin = async (e) => {
         e.preventDefault();
-        debugger
         // $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.add('"+this.state.userName+"','"+this.state.password+"').then((result) => {alert(result);})</script>").appendTo(document.body);
         $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.login('" + this.state.userName + "','" + this.state.password + "').then((result) => {if(result = 'true') { window.location='/LB-2'}})</script>").appendTo(document.body);
     }

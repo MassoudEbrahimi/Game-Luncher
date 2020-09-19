@@ -15,7 +15,6 @@ class Limbo extends Component {
     }
     render() {
         const { data } = this.state
-        debugger
         if(data===null) return (
             <MasterPage>
                 <div id="comingSoon">
