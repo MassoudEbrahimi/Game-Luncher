@@ -115,7 +115,11 @@ div.Game-progressBar{
     color: black;
     cursor: pointer;
 }
-
+div.progressBar {
+    /* width: 80%;
+    height: 25px;
+    background-color: crimson; */
+}
 
 
 /* Content */
