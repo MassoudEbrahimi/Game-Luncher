@@ -10,7 +10,9 @@ class Sidebar extends Component {
         super(props);
         this.state = {
             progressPercentageLimbo: 0,
-            progressPercentageLB2: 0
+            progressPercentageLB2: 0,
+            LimbostartButton: false,
+            LB2startButton: false
         }
     }
     componentDidMount = () => {
@@ -58,11 +60,17 @@ class Sidebar extends Component {
     }
     handleDownloading = (event, id) => {
         debugger
-        if (id === 1) {
+        if (id === 2)
+            this.setState({ LimbostartButton: !this.state.LimbostartButton })
+        else
+            if (id === 1)
+                this.setState({ LB2startButton: !this.state.LB2startButton })
 
+        if (id === 1) {
+            //Ajaax
         }
         if (id === 1) {
-
+            //Ajax
         }
     }
     render() {
@@ -74,7 +82,9 @@ class Sidebar extends Component {
                     <li className={"/LB-2" === window.location.pathname ? "sidebar-active " : ""} key={1}>
                         <div className="d-flex game-text">
                             <Link className="text-game" to="/LB-2">LB-2</Link>
-                            <Link className="button-playGame" onClick={(e) => this.handleDownloading(e, 1)}><span className="mdi mdi-play-circle" /></Link>
+                            <Link className="button-playGame" onClick={(e) => this.handleDownloading(e, 1)}>
+                                <span className={this.state.LB2startButton === false ? "mdi mdi-play-circle" : "mdi mdi-pause-circle"} />
+                            </Link>
                         </div>
                         {/* <ProgressBars /> */}
                         {window.location.pathname === "/LB-2" && <div className="Game-progressBar" >
@@ -88,7 +98,9 @@ class Sidebar extends Component {
                     <li className={"/Limbo" === window.location.pathname ? "sidebar-active " : ""} key={2}>
                         <div className="d-flex game-text">
                             <Link className="text-game" to="/Limbo">LIMBO</Link>
-                            <Link className="button-playGame" onClick={(e) => this.handleDownloading(e, 1)}><span className="mdi mdi-play-circle" /></Link>
+                            <Link className="button-playGame" onClick={(e) => this.handleDownloading(e, 2)}>
+                                <span className={this.state.LimbostartButton === false ? "mdi mdi-play-circle" : "mdi mdi-pause-circle"} />
+                            </Link>
                         </div>
                         {/* <ProgressBars /> */}
                         {window.location.pathname === "/Limbo" && <div className="Game-progressBar" >
