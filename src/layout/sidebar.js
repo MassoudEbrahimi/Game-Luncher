@@ -9,32 +9,55 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            progressPercentage: 0
+            progressPercentageLimbo: 0,
+            progressPercentageLB2: 0
         }
     }
     componentDidMount = () => {
-
-        const { progressPercentage } = this.state
-        if (progressPercentage < 0) this.setState({ progressPercentage: 0 })
-        if (progressPercentage > 100) this.setState({ progressPercentage: 100 })
+        const { progressPercentageLB2, progressPercentageLimbo } = this.state
+        if (window.location.pathname === "/Limbo") {
+            if (progressPercentageLimbo < 0) this.setState({ progressPercentageLimbo: 0 })
+            if (progressPercentageLimbo > 100) this.setState({ progressPercentageLimbo: 100 })
+        }
+        if (window.location.pathname === "/LB-2") {
+            if (progressPercentageLB2 < 0) this.setState({ progressPercentageLB2: 0 })
+            if (progressPercentageLB2 > 100) this.setState({ progressPercentageLB2: 100 })
+        }
     }
     Increase = (event) => {
-        const { progressPercentage } = this.state;
-        if (progressPercentage < 0)
-            this.setState({ progressPercentage: 5 })
-        else
-            this.setState({ progressPercentage: progressPercentage + 5 })
-
+        const { progressPercentageLB2, progressPercentageLimbo } = this.state
+        if (window.location.pathname === "/LB-2") {
+            if (progressPercentageLB2 < 0)
+                this.setState({ progressPercentageLB2: 5 })
+            else
+                this.setState({ progressPercentageLB2: progressPercentageLB2 + 5 })
+        }
+        if (window.location.pathname === "/Limbo") {
+            if (progressPercentageLimbo < 0)
+                this.setState({ progressPercentageLimbo: 5 })
+            else
+                this.setState({ progressPercentageLimbo: progressPercentageLimbo + 5 })
+        }
     }
     Decrease = (event) => {
-        const { progressPercentage } = this.state;
-        if (progressPercentage > 100)
-            this.setState({ progressPercentage: 95 })
-        else
-            this.setState({ progressPercentage: progressPercentage - 5 })
+        const { progressPercentageLB2, progressPercentageLimbo } = this.state
+        if (window.location.pathname === "/LB-2") {
+            if (progressPercentageLB2 > 100)
+                this.setState({ progressPercentageLB2: 95 })
+            else
+                this.setState({ progressPercentageLB2: progressPercentageLB2 - 5 })
+        }
+        if (window.location.pathname === "/Limbo") {
+            if (progressPercentageLimbo > 100)
+                this.setState({ progressPercentageLimbo: 95 })
+            else
+                this.setState({ progressPercentageLimbo: progressPercentageLimbo - 5 })
+        }
+
+
     }
     render() {
-        const { progressPercentage } = this.state
+        const { progressPercentageLB2, progressPercentageLimbo } = this.state
         return (
             <div className="sidebar" >
                 <img src="images/Everfall.svg" alt="" />
@@ -46,10 +69,10 @@ class Sidebar extends Component {
                         </div>
                         {/* <ProgressBars /> */}
                         {window.location.pathname === "/LB-2" && <div className="Game-progressBar" >
-                            <ProgressBar progressPercent={progressPercentage} />
+                            <ProgressBar progressPercent={progressPercentageLB2} />
                             <span style={{ marginTop: "0px", position: "absolute", left: "30px", fontSize: "14px" }}>Downloading ...</span>
                             <span style={{ marginTop: "-3px", position: "absolute", right: "30px" }}>
-                                {0 > progressPercentage ? 0 : progressPercentage > 100 ? 100 : progressPercentage}%
+                                {0 > progressPercentageLB2 ? 0 : progressPercentageLB2 > 100 ? 100 : progressPercentageLB2}%
                                         </span>
                         </div>}
                     </li>
@@ -59,11 +82,11 @@ class Sidebar extends Component {
                             <Link className="button-playGame" to="/Limbo"><span className="mdi mdi-play-circle" /></Link>
                         </div>
                         {/* <ProgressBars /> */}
-                        {window.location.pathname==="/Limbo" &&<div className="Game-progressBar" >
-                            <ProgressBar progressPercent={progressPercentage} />
+                        {window.location.pathname === "/Limbo" && <div className="Game-progressBar" >
+                            <ProgressBar progressPercent={progressPercentageLimbo} />
                             <span style={{ marginTop: "0px", position: "absolute", left: "30px", fontSize: "14px" }}>Downloading ...</span>
                             <span style={{ marginTop: "-3px", position: "absolute", right: "30px" }}>
-                                {0 > progressPercentage ? 0 : progressPercentage > 100 ? 100 : progressPercentage}%
+                                {0 > progressPercentageLimbo ? 0 : progressPercentageLimbo > 100 ? 100 : progressPercentageLimbo}%
                                     </span>
                         </div>}
                     </li>
