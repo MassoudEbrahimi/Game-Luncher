@@ -56,6 +56,15 @@ class Sidebar extends Component {
 
 
     }
+    handleDownloading = (event, id) => {
+        debugger
+        if (id === 1) {
+
+        }
+        if (id === 1) {
+
+        }
+    }
     render() {
         const { progressPercentageLB2, progressPercentageLimbo } = this.state
         return (
@@ -65,7 +74,7 @@ class Sidebar extends Component {
                     <li className={"/LB-2" === window.location.pathname ? "sidebar-active " : ""} key={1}>
                         <div className="d-flex game-text">
                             <Link className="text-game" to="/LB-2">LB-2</Link>
-                            <Link className="button-playGame" to="/LB-2"><span className="mdi mdi-play-circle" /></Link>
+                            <Link className="button-playGame" onClick={(e) => this.handleDownloading(e, 1)}><span className="mdi mdi-play-circle" /></Link>
                         </div>
                         {/* <ProgressBars /> */}
                         {window.location.pathname === "/LB-2" && <div className="Game-progressBar" >
@@ -79,7 +88,7 @@ class Sidebar extends Component {
                     <li className={"/Limbo" === window.location.pathname ? "sidebar-active " : ""} key={2}>
                         <div className="d-flex game-text">
                             <Link className="text-game" to="/Limbo">LIMBO</Link>
-                            <Link className="button-playGame" to="/Limbo"><span className="mdi mdi-play-circle" /></Link>
+                            <Link className="button-playGame" onClick={(e) => this.handleDownloading(e, 1)}><span className="mdi mdi-play-circle" /></Link>
                         </div>
                         {/* <ProgressBars /> */}
                         {window.location.pathname === "/Limbo" && <div className="Game-progressBar" >
