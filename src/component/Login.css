@@ -1,5 +1,5 @@
 .login-sidebar {
-    background-color: #121212 !important;
+    background-color: #e7e7e7 !important;
     /* overflow-y: auto; */
     overflow: hidden;
     width: 400px;
@@ -26,7 +26,7 @@
 div.login-footer {
     font-size: 12px;
     color: #bec2bf;
-    margin: 5px 50px 0px 50px;
+    margin: 20px 50px 0px 50px;
     position: relative;
 }
 
@@ -37,6 +37,14 @@ div.login-footer a {
 div.login-footer a:hover {
     color: crimson;
 }
+span.Validation{
+    color : #940000;
+    align-self: center;
+    visibility: collapse;
+    
+    /* font-size: 15px; */
+}
+
 
 .login-logo {
     text-align: center;
@@ -72,9 +80,10 @@ div.login-footer a:hover {
 }
 
 .btn-login-defualt {
+    visibility: hidden;
     margin-top: 15px;
     background-color: #121212;
-    border: 2px ghostwhite solid;
+    border: 0px ghostwhite solid;
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 30px;
@@ -82,8 +91,12 @@ div.login-footer a:hover {
     color: crimson;
     outline: none !important;
 }
-
+.btn-login-changed {
+    background-color: blue;
+    border: blue 2px solid;
+}
 .btn-login-submit {
+    
     margin-top: 15px;
     background-color: crimson;
     border: crimson 2px solid;
@@ -111,8 +124,9 @@ div.login-footer a:hover {
 
 .btn-login-defualt-signup {
     margin-top: 10px;
+    visibility: hidden;
     background-color: #121212;
-    border: 2px ghostwhite solid;
+    border: 0px ghostwhite solid;
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 30px;
@@ -143,17 +157,17 @@ input[type=checkbox]:checked+label {
 } */
 
 .login-Checkbox {
-    margin: 15px 10px 10px 70px;
+    margin: 8px 10px 40px 65px;
+
 }
 
 img.ArtImg-Top {
-    margin: -10px 0px 0px 0px;
+    margin: -10px 0px 0px -100px;
     opacity: 0.4;
-    transform: scaleX(-1);
-    width: 300px;
-    -webkit-transform: scaleX(-1) rotate(220deg);
-    -moz-transform: scaleX(-1) rotate(220deg);
-    -o-transform: scaleX(-1) rotate(220deg);
+    transform: scaleX(-1) rotate(220deg);
+    width: 600px;
+    -webkit-transform: scaleX(-1) rotate(215deg);
+    
     filter: FlipH;
     -ms-filter: "FlipH";
     position: absolute;
@@ -162,14 +176,12 @@ img.ArtImg-Top {
 img.ArtImg-bottom-signin {
     /* bottom: 2px;
     right: -5px; */
-    margin: 390px 0px 0px 130px;
+    margin: 450px 0px 0px 130px;
     /* margin: 0px 0px 0px 130px; */
     opacity: 0.2;
     transform: scaleX(1) rotate(-17deg);
     width: 300px;
-    -webkit-transform: scaleX(1) rotate(-17deg);
-    -moz-transform: scaleX(1) rotate(-17deg);
-    -o-transform: scaleX(1) rotate(-17deg);
+    -webkit-transform: scaleX(1) rotate(-20deg);
     filter: FlipH;
     -ms-filter: "FlipH";
     position: relative;
@@ -183,8 +195,6 @@ img.ArtImg-bottom-signup {
     transform: scaleX(1) rotate(-17deg);
     width: 300px;
     -webkit-transform: scaleX(1) rotate(-17deg);
-    -moz-transform: scaleX(1) rotate(-17deg);
-    -o-transform: scaleX(1) rotate(-17deg);
     filter: FlipH;
     -ms-filter: "FlipH";
     position: relative;
@@ -248,15 +258,19 @@ input[type="checkbox"] {
 input[type="checkbox"]+label::before {
     width: 1.25rem;
     height: 1.25rem;
-    padding: 10px;
+    padding: 5px;
     margin-right: 5px;
     transition: 0.3 ease all;
-    border-radius: 5px;
+    border-radius: 2.5px;
     border: 2px solid gray;
     background-color: #fff;
     display: block;
     float: left;
     content: "";
+}
+.login-checkmark{
+    font-size: 12px;
+    position: absolute;
 }
 
 input[type="checkbox"]:checked+label::before {
@@ -334,7 +348,7 @@ input[type="checkbox"]:checked+label::before {
         width: 100%;
     }
     .login-Checkbox {
-        margin: 15px 10px 10px 60px;
+        margin: 10px 10px 10px 55px;
     }
     input[type="checkbox"] {
         display: none;
@@ -342,11 +356,11 @@ input[type="checkbox"]:checked+label::before {
     input[type="checkbox"]+label::before {
         width: 1.25rem;
         height: 1.25rem;
-        padding: 10px;
+        padding: 5px;
         margin-right: 5px;
         transition: 0.3 ease all;
-        border-radius: 5px;
-        border: 2px solid gray;
+        border-radius: 2.5px;
+        border: 1px solid gray;
         background-color: #fff;
         display: block;
         float: left;

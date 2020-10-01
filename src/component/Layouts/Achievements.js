@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Loading from '../loading/loading'
 import Data from '../../Data/AchievementData'
-// import ImageList from '../../SlideShow/slideShow';
+import ImageList from '../../SlideShow/slideShow';
 
 class Achievements extends Component {
     constructor(props) {

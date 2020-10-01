@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import $ from 'jquery'
 import Login from '../component/Login';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 class SignUp extends Component {
@@ -17,8 +18,39 @@ class SignUp extends Component {
     }
     handleformSignup = async (e) => {
         e.preventDefault();
-        const { newEmail, newPassword, newUser } = this.state
-        $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.signup('" + newUser + "','" + newPassword + "','" + newEmail + "').then((result) => {if(result = 'true') { window.location='/LB-2'}})</script>").appendTo(document.body);
+        const { newEmail, newPassword, newUser , confirmnewPassword } = this.state
+           if(newPassword !==confirmnewPassword)
+           toast("Passwords does not match")
+           else
+           {
+            // $("<script>(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.signup('" + newUser + "','" + newPassword + "','" + newEmail + "').then((result) => {if(result = 'true') { window.location='/LB-2'}})</script>").appendTo(document.body);
+              const src3 = document.createElement("script");
+        src3.type="text/javascript";
+        src3.async=true;
+        src3.id="test2132"
+        debugger
+        var node3 = `(async function () { await CefSharp.BindObjectAsync('cefCustomObjectMain');})(); cefCustomObjectMain.signup('${this.state.newUser}','${this.state.newPassword}','${this.state.newEmail}').then((result) => {
+            document.getElementById("xxx").innerHTML = result;
+        })`
+        src3.appendChild(document.createTextNode(node3))
+        document.body.appendChild(src3)
+        // document.body.removeChild(src3)
+        var prog = document.getElementById("xxx").innerHTML;
+        if (prog === "UserExist")
+        {
+            toast("Username already Exist")
+        }else if(prog === "EmailExist")
+        {
+            toast("Email already exist")
+        }else if(prog === "Done")
+        {
+            toast("Success")
+        }else{
+            toast("unexpected error occurred")
+        }
+        document.body.removeChild(src3)
+        
+    }
     }
     Logout = () => {
         const { newUser, newPassword, newEmail, confirmnewPassword } = this.state
@@ -70,7 +102,7 @@ class SignUp extends Component {
                     </div>
                     <div className="text-center">
                         <button className={
-                            (newPassword === null & newUser === null) || (newPassword === "" & newUser === "") ?
+                            (newPassword === "" || confirmnewPassword ==="" || newUser === "" || newEmail === "" ) ?
                                 "btn-login-defualt-signup" : "btn-login-submit-signup"}>
                             <span className="mdi mdi-login-variant" />
                         </button>

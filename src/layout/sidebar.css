@@ -3,7 +3,7 @@
 **********************/
 
 .sidebar {
-    background: #303030;
+    background: #525252;
     width: 300px;
     position: fixed;
     top: 0;
@@ -23,8 +23,17 @@
     border-left: 5px crimson solid;
     cursor: pointer !important;
 }
-.sidebar-active div > a {
+.sidebar-active div > a { 
     color: white !important;
+}
+#prs{
+    visibility: collapse;
+}
+#progStat{
+    visibility: collapse;
+}
+.sidebar-active >div>a.button-playGame {
+    visibility: visible;
 }
 .sidebar img {
     width: 300px;
@@ -50,13 +59,21 @@
 div.game-text{
     width: 100%;
 }
+.sidebar-active >div.Game-progressBar{
+    visibility: visible;
+}
+.sidebar-active >div#progStat{
+    visibility: visible;
+}
 div.Game-progressBar{
     width: 90%;
+    visibility: collapse;
     margin: auto;
     padding: 0px 0px 5px 0px;
     display: flex;
     color: whitesmoke;
     cursor: pointer;
+    
 }
 .sidebar-parents>li>div>a.text-game {
     display: inline-block;
@@ -69,6 +86,10 @@ div.Game-progressBar{
     padding: 4px 28px;
     cursor: pointer !important;
     
+}
+.button-playGame 
+{
+    visibility: collapse;
 }
 .sidebar-parents>li>div>a.button-playGame {
     display: block;
@@ -115,11 +136,7 @@ div.Game-progressBar{
     color: black;
     cursor: pointer;
 }
-div.progressBar {
-    /* width: 80%;
-    height: 25px;
-    background-color: crimson; */
-}
+
 
 
 /* Content */

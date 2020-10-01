@@ -16,17 +16,7 @@ class News extends Component {
                                     <div className="news-card">
                                         <img src={node.image} alt="news" />
                                     </div>
-                                    <div className="new-text-content">Aute id laborum dolor eu tempor. Non culpa elit laborum exercitation
-                                    nostrud minim deserunt. Minim culpa aliquip dolore cupidatat magna
-                                    anim Lorem anim et in. Quis consequat sit ex exercitation laboris.Sit nisi consequat eu
-                                    id aliquip irure ipsum occaecat deserunt amet culpa qui. Incididunt aliquip adipisicing
-                                    nulla dolor aliqua sunt ad nostrud elit nostrud qui. Elit eu sunt aliquip minim. Ad
-                                    elit ipsum ea ullamco qui nisi. Duis ut consequat elit et si
-                                    nt. Ad proident quis cupidatat aliqua ut adipisicing fugiat irure
-                                    . Ullamco dolore magna sit minim.Nisi ipsum cillum ad aute amet esse exc
-                                    epteur nisi. Ut exercitation dolore magna consectetur ullamco in mollit ullamco
-                                    ea velit ipsum mollit. Non esse fugiat commodo repreh
-                                                 enderit minim consequat laboris dolore tempor irure.</div>
+                                    <div className="new-text-content">LB-2 Is a non-linear horror game where you are hunted by 3 intelligent creatures in the underground lab they were made in. The beasts have killed almost all of your colleagues and now it is solely up to you to get to the facility's weapon armory and kill them before they escape.</div>
                                 </div>
                             </li>
                         )

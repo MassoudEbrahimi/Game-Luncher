@@ -4,17 +4,20 @@ import PropTypes from 'prop-types'
 import { data, post } from 'jquery';
 const Track = styled.div`
     width: 100%;
-    height: 20px;
+    height: 10px;
     background-color: #222;
     border-radius: 10px;
-    box-shadow : inset 0 0 5px #000 
+    
     `;
 const Thumb = styled.div`
     width : ${props => props.percentage}%;
     height : 100%;
+    VerticalAlignment: center;
     background-color: #DC143C;
     border-radius: 8px;
+    opacity : 0.9;
     transition : width 0.4s ease-in-out;
+    
     `;
 
 class ProgressBar extends Component {

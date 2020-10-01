@@ -10,7 +10,7 @@ class Toast {
         })
     }
     Error(){
-        toast.error("",{
+        toast.error("Wrong User name OR Password",{
             autoClose : 2000
         })
     }
